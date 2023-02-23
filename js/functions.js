@@ -1,14 +1,8 @@
-const isLessOrEqual = (string, length) => {
-  if (string.length <= length) {
-    return true;
-  } else {
-    return false;
-  }
-};
+const isLessOrEqual = (string, length) => string.length <= length;
 
 isLessOrEqual('проверяемая строка', 20);
 
-const isPalindrom = (string) => {
+const isPalindrome = (string) => {
   const tempString = string
     .toLowerCase()
     .replaseAll(' ', '');
@@ -20,7 +14,7 @@ const isPalindrom = (string) => {
   return tempString === reverseString;
 };
 
-isPalindrom('топот');
+isPalindrome('топот');
 
 const extractNumber = (string) => {
   let result = '';
