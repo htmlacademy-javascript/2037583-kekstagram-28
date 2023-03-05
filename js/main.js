@@ -82,9 +82,7 @@ const createPicture = (index) => ({
 });
 
 const getPictures = () => {
-
   const arr = [];
-
   for(let i = 1; i <= PICTURE_COUNT;i++){
     arr[i] = createPicture(i);
   }
@@ -92,6 +90,4 @@ const getPictures = () => {
   return arr;
 };
 
-const el = getPictures();
-
-el();
+getPictures();
