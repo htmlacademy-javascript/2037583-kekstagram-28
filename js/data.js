@@ -56,7 +56,7 @@ const createComment = () => ({
 
 const createPicture = (index) => ({
   id: index,
-  url: `photos/${index}.jpg`,
+  url: `photos/${index + 1}.jpg`,
   description: getRandomArrayElement(DESCRIPTIONS),
   likes: generateRandom(LIKES_MIN_COUNT,LIKES_MAX_COUNT),
   comments: Array.from({ length: generateRandom(0,COMMENT_COUNT)} , createComment)
@@ -64,7 +64,7 @@ const createPicture = (index) => ({
 
 const getPictures = () => {
   const arr = [];
-  for(let i = 1; i <= PICTURE_COUNT;i++){
+  for(let i = 0; i < PICTURE_COUNT;i++){
     arr[i] = createPicture(i);
   }
 
