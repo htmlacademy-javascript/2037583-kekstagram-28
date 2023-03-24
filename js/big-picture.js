@@ -7,15 +7,15 @@ const cancelButton = document.querySelector('.big-picture__cancel');
 
 const createComment = ({ avatar, name, message }) => {
   const comment = document.createElement('li');
-  comment.classList.add('.social__comment');
+  comment.classList.add('social__comment');
 
   const socialPicture = document.createElement('img');
-  socialPicture.classList.add('.social__picture');
+  socialPicture.classList.add('social__picture');
   socialPicture.src = avatar;
   socialPicture.alt = name;
 
   const socialText = document.createElement('p');
-  socialPicture.classList.add('.social__text');
+  socialPicture.classList.add('social__text');
   socialText.innerHTML = message;
 
   comment.appendChild(socialPicture);
@@ -52,7 +52,7 @@ const onCancelButtonClick = () => {
   hideBigPicture();
 };
 
-const renderPictireDetails = ({ url, likes, description }) => {
+const renderPictureDetails = ({ url, likes, description }) => {
   bigPicture.querySelector('.big-picture__img img').src = url;
   bigPicture.querySelector('.likes-count').alt = description;
   bigPicture.querySelector('.big-picture__img img').textContent = likes;
@@ -66,7 +66,7 @@ const showBigPicture = (data) => {
   commentCount.classList.add('hidden');
   document.addEventListener('keydown', onDocumentKeydown);
 
-  renderPictireDetails(data);
+  renderPictureDetails(data);
   renderComments(data.comments);
 };
 
