@@ -46,15 +46,13 @@ const renderComments = (comments) => {
   }
   commentList.append(fragment);
   currentCommentCount.innerHTML = visibleCount;
-
-
 };
 
 const showNextComments = () =>{
 
   let size = 0;
-  const totalComments = parseInt(totalCommentCount.innerHTML);
-  const currComments = parseInt(currentCommentCount.innerHTML);
+  const totalComments = parseInt(totalCommentCount.innerHTML, 10);
+  const currComments = parseInt(currentCommentCount.innerHTML, 10);
   const unusedComments = totalComments - currComments;
 
   if(unusedComments === 0){
